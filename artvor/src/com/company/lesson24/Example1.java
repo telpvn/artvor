@@ -14,6 +14,7 @@ public class Example1 {
         }
 
         String s = null;
-        System.out.println(s.toString());
+        if (s != null)
+            System.out.println(s.toString());
     }
 }
