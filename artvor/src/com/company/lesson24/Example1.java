@@ -10,5 +10,15 @@ public class Example1 {
     public static void main(String[] args) {
         String s = null;
         System.out.println(s.toString());
+        try {
+            m();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void m() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        bufferedReader.readLine();
     }
 }
